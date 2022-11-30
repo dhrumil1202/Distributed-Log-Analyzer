@@ -1,0 +1,204 @@
+2022-11-28 23:44:21,304 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2022-11-28 23:44:21,564 WARNING werkzeug MainThread :  * Debugger is active!
+2022-11-28 23:44:21,574 INFO werkzeug MainThread :  * Debugger PIN: 522-122-102
+2022-11-28 23:44:21,605 INFO werkzeug Thread-2 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-28 23:46:17,492 INFO werkzeug Thread-1 :  * Detected change in 'C:\\Users\\Dhrumil\\anaconda3\\Lib\\site-packages\\flask\\app.py', reloading
+2022-11-28 23:46:17,552 INFO werkzeug Thread-1 :  * Detected change in 'C:\\Users\\Dhrumil\\anaconda3\\Lib\\site-packages\\flask\\_compat.py', reloading
+2022-11-28 23:46:17,603 INFO werkzeug Thread-5 : 127.0.0.1 - - [28/Nov/2022 23:46:17] "[35m[1mGET /apiv1/add HTTP/1.1[0m" 500 -
+2022-11-28 23:46:18,598 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2022-11-28 23:46:18,956 WARNING werkzeug MainThread :  * Debugger is active!
+2022-11-28 23:46:18,963 INFO werkzeug MainThread :  * Debugger PIN: 522-122-102
+2022-11-28 23:46:19,011 INFO werkzeug Thread-2 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-28 23:48:28,574 INFO werkzeug Thread-5 : 127.0.0.1 - - [28/Nov/2022 23:48:28] "[35m[1mGET /apiv1/add HTTP/1.1[0m" 500 -
+2022-11-28 23:50:35,798 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2022-11-28 23:50:36,090 WARNING werkzeug MainThread :  * Debugger is active!
+2022-11-28 23:50:36,095 INFO werkzeug MainThread :  * Debugger PIN: 522-122-102
+2022-11-28 23:50:36,139 INFO werkzeug Thread-2 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-28 23:50:39,490 ERROR root Thread-5 : 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Logger\app.py", line 13, in add
+    a = int(data['a'])
+TypeError: 'NoneType' object is not subscriptable
+2022-11-28 23:50:39,521 INFO werkzeug Thread-5 : 127.0.0.1 - - [28/Nov/2022 23:50:39] "[35m[1mGET /apiv1/add HTTP/1.1[0m" 500 -
+2022-11-28 23:51:26,221 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Masters degree\\SEM 3\\Datacenter scale Computing\\Project\\Logger\\app.py', reloading
+2022-11-28 23:51:26,221 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Masters degree\\SEM 3\\Datacenter scale Computing\\Project\\Logger\\app.py', reloading
+2022-11-28 23:51:26,221 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Masters degree\\SEM 3\\Datacenter scale Computing\\Project\\Logger\\app.py', reloading
+2022-11-28 23:51:27,259 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2022-11-28 23:51:27,645 WARNING werkzeug MainThread :  * Debugger is active!
+2022-11-28 23:51:27,650 INFO werkzeug MainThread :  * Debugger PIN: 522-122-102
+2022-11-28 23:51:27,686 INFO werkzeug Thread-2 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-28 23:51:30,097 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2022-11-28 23:51:30,349 WARNING werkzeug MainThread :  * Debugger is active!
+2022-11-28 23:51:30,354 INFO werkzeug MainThread :  * Debugger PIN: 522-122-102
+2022-11-28 23:51:30,388 INFO werkzeug Thread-2 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-28 23:51:32,612 ERROR root Thread-5 : 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Logger\app.py", line 13, in add
+    a = int(data['a'])
+TypeError: 'NoneType' object is not subscriptable
+2022-11-28 23:51:32,633 INFO werkzeug Thread-5 : 127.0.0.1 - - [28/Nov/2022 23:51:32] "[35m[1mGET /apiv1/add HTTP/1.1[0m" 500 -
+2022-11-28 23:53:02,792 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Masters degree\\SEM 3\\Datacenter scale Computing\\Project\\Logger\\app.py', reloading
+2022-11-28 23:53:02,792 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Masters degree\\SEM 3\\Datacenter scale Computing\\Project\\Logger\\app.py', reloading
+2022-11-28 23:53:03,822 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2022-11-28 23:53:04,120 WARNING werkzeug MainThread :  * Debugger is active!
+2022-11-28 23:53:04,126 INFO werkzeug MainThread :  * Debugger PIN: 522-122-102
+2022-11-28 23:53:04,158 INFO werkzeug Thread-2 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-28 23:53:09,625 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2022-11-28 23:53:09,873 WARNING werkzeug MainThread :  * Debugger is active!
+2022-11-28 23:53:09,878 INFO werkzeug MainThread :  * Debugger PIN: 522-122-102
+2022-11-28 23:53:09,912 INFO werkzeug Thread-2 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-28 23:53:12,611 ERROR root Thread-5 : 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Logger\app.py", line 15, in add
+    a = int(data['a'])
+TypeError: 'NoneType' object is not subscriptable
+2022-11-28 23:53:12,634 INFO werkzeug Thread-5 : 127.0.0.1 - - [28/Nov/2022 23:53:12] "[35m[1mGET /apiv1/add HTTP/1.1[0m" 500 -
+2022-11-28 23:53:49,701 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2022-11-28 23:53:49,961 WARNING werkzeug MainThread :  * Debugger is active!
+2022-11-28 23:53:49,967 INFO werkzeug MainThread :  * Debugger PIN: 522-122-102
+2022-11-28 23:53:50,002 INFO werkzeug Thread-2 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-28 23:53:51,973 ERROR root Thread-5 : 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Logger\app.py", line 16, in add
+    a = int(data['a'])
+TypeError: 'NoneType' object is not subscriptable
+2022-11-28 23:53:51,978 INFO werkzeug Thread-1 :  * Detected change in 'C:\\Users\\Dhrumil\\anaconda3\\Lib\\site-packages\\werkzeug\\wsgi.py', reloading
+2022-11-28 23:53:52,020 INFO werkzeug Thread-1 :  * Detected change in 'C:\\Users\\Dhrumil\\anaconda3\\Lib\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2022-11-28 23:53:52,056 INFO werkzeug Thread-5 : 127.0.0.1 - - [28/Nov/2022 23:53:52] "GET /apiv1/add HTTP/1.1" 200 -
+2022-11-28 23:53:53,044 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2022-11-28 23:53:53,278 WARNING werkzeug MainThread :  * Debugger is active!
+2022-11-28 23:53:53,283 INFO werkzeug MainThread :  * Debugger PIN: 522-122-102
+2022-11-28 23:53:53,323 INFO werkzeug Thread-2 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-28 23:56:03,008 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2022-11-28 23:56:03,277 WARNING werkzeug MainThread :  * Debugger is active!
+2022-11-28 23:56:03,281 INFO werkzeug MainThread :  * Debugger PIN: 522-122-102
+2022-11-28 23:56:03,318 INFO werkzeug Thread-2 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-28 23:56:06,076 ERROR root Thread-5 : 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Logger\app.py", line 16, in add
+    a = int(data['a'])
+TypeError: 'NoneType' object is not subscriptable
+2022-11-28 23:56:06,079 INFO werkzeug Thread-5 : 127.0.0.1 - - [28/Nov/2022 23:56:06] "GET /apiv1/add HTTP/1.1" 200 -
+2022-11-28 23:56:41,064 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2022-11-28 23:56:41,304 WARNING werkzeug MainThread :  * Debugger is active!
+2022-11-28 23:56:41,304 INFO werkzeug MainThread :  * Debugger PIN: 522-122-102
+2022-11-28 23:56:41,343 INFO werkzeug Thread-2 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-28 23:56:47,307 ERROR root Thread-5 : 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Logger\app.py", line 16, in add
+    a = int(data['a'])
+TypeError: 'NoneType' object is not subscriptable
+2022-11-28 23:56:47,310 INFO werkzeug Thread-5 : 127.0.0.1 - - [28/Nov/2022 23:56:47] "GET /apiv1/add HTTP/1.1" 200 -
+2022-11-28 23:57:01,859 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2022-11-28 23:57:02,111 WARNING werkzeug MainThread :  * Debugger is active!
+2022-11-28 23:57:02,116 INFO werkzeug MainThread :  * Debugger PIN: 522-122-102
+2022-11-28 23:57:02,150 INFO werkzeug Thread-2 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-28 23:57:05,540 ERROR root Thread-5 : 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Logger\app.py", line 16, in add
+    a = int(data['a'])
+TypeError: 'NoneType' object is not subscriptable
+2022-11-28 23:57:05,544 INFO werkzeug Thread-5 : 127.0.0.1 - - [28/Nov/2022 23:57:05] "GET /apiv1/add HTTP/1.1" 200 -
+2022-11-28 23:57:18,539 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2022-11-28 23:57:20,516 WARNING werkzeug MainThread :  * Debugger is active!
+2022-11-28 23:57:20,528 INFO werkzeug MainThread :  * Debugger PIN: 522-122-102
+2022-11-28 23:57:20,644 INFO werkzeug Thread-7 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-28 23:57:23,607 ERROR root Thread-13 : 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Logger\app.py", line 16, in add
+    a = int(data['a'])
+TypeError: 'NoneType' object is not subscriptable
+2022-11-28 23:57:23,612 INFO werkzeug Thread-13 : 127.0.0.1 - - [28/Nov/2022 23:57:23] "GET /apiv1/add HTTP/1.1" 200 -
+2022-11-28 23:57:56,974 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2022-11-28 23:57:59,024 WARNING werkzeug MainThread :  * Debugger is active!
+2022-11-28 23:57:59,034 INFO werkzeug MainThread :  * Debugger PIN: 522-122-102
+2022-11-28 23:57:59,164 INFO werkzeug Thread-7 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-28 23:58:03,236 ERROR root Thread-13 : 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Logger\app.py", line 16, in add
+    a = int(data['a'])
+TypeError: 'NoneType' object is not subscriptable
+2022-11-28 23:58:03,241 INFO werkzeug Thread-13 : 127.0.0.1 - - [28/Nov/2022 23:58:03] "GET /apiv1/add HTTP/1.1" 200 -
+2022-11-28 23:58:19,300 INFO werkzeug Thread-6 :  * Detected change in 'D:\\Masters degree\\SEM 3\\Datacenter scale Computing\\Project\\Logger\\app.py', reloading
+2022-11-28 23:58:20,404 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2022-11-28 23:58:22,071 WARNING werkzeug MainThread :  * Debugger is active!
+2022-11-28 23:58:22,080 INFO werkzeug MainThread :  * Debugger PIN: 522-122-102
+2022-11-28 23:58:22,219 INFO werkzeug Thread-7 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-28 23:59:39,366 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2022-11-28 23:59:39,656 WARNING werkzeug MainThread :  * Debugger is active!
+2022-11-28 23:59:39,661 INFO werkzeug MainThread :  * Debugger PIN: 522-122-102
+2022-11-28 23:59:39,694 INFO werkzeug Thread-2 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-28 23:59:42,899 ERROR root Thread-5 : 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Logger\app.py", line 17, in add
+    a = int(data['a'])
+TypeError: 'NoneType' object is not subscriptable
+2022-11-28 23:59:42,901 INFO werkzeug Thread-5 : 127.0.0.1 - - [28/Nov/2022 23:59:42] "GET /apiv1/add HTTP/1.1" 200 -
+2022-11-28 23:59:58,783 ERROR root Thread-6 : 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Logger\app.py", line 17, in add
+    a = int(data['a'])
+TypeError: 'NoneType' object is not subscriptable
+2022-11-28 23:59:58,783 INFO werkzeug Thread-6 : 127.0.0.1 - - [28/Nov/2022 23:59:58] "GET /apiv1/add HTTP/1.1" 200 -
+2022-11-29 00:01:04,699 ERROR root Thread-7 : 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Logger\app.py", line 17, in add
+    a = int(data['a'])
+TypeError: 'NoneType' object is not subscriptable
+2022-11-29 00:01:04,700 INFO werkzeug Thread-7 : 127.0.0.1 - - [29/Nov/2022 00:01:04] "GET /apiv1/add HTTP/1.1" 200 -
+2022-11-29 00:02:09,633 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Masters degree\\SEM 3\\Datacenter scale Computing\\Project\\Logger\\app.py', reloading
+2022-11-29 00:02:09,634 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Masters degree\\SEM 3\\Datacenter scale Computing\\Project\\Logger\\app.py', reloading
+2022-11-29 00:02:10,656 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2022-11-29 00:02:13,014 WARNING werkzeug MainThread :  * Debugger is active!
+2022-11-29 00:02:13,014 INFO werkzeug MainThread :  * Debugger PIN: 522-122-102
+2022-11-29 00:02:13,054 INFO werkzeug Thread-2 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-29 00:02:16,494 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2022-11-29 00:02:16,754 WARNING werkzeug MainThread :  * Debugger is active!
+2022-11-29 00:02:16,764 INFO werkzeug MainThread :  * Debugger PIN: 522-122-102
+2022-11-29 00:02:16,799 INFO werkzeug Thread-2 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-29 00:02:19,544 ERROR root Thread-5 : 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Logger\app.py", line 17, in add
+    a = int(data['a'])
+TypeError: 'NoneType' object is not subscriptable
+2022-11-29 00:02:19,546 INFO werkzeug Thread-5 : 127.0.0.1 - - [29/Nov/2022 00:02:19] "POST /apiv1/add HTTP/1.1" 200 -
+2022-11-29 00:04:15,147 INFO werkzeug Thread-6 : 127.0.0.1 - - [29/Nov/2022 00:04:15] "[31m[1mPOST /apiv1/add HTTP/1.1[0m" 400 -
+2022-11-29 00:04:44,380 INFO werkzeug Thread-7 : 127.0.0.1 - - [29/Nov/2022 00:04:44] "POST /apiv1/add HTTP/1.1" 200 -
+2022-11-29 00:05:09,891 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2022-11-29 00:05:10,149 WARNING werkzeug MainThread :  * Debugger is active!
+2022-11-29 00:05:10,154 INFO werkzeug MainThread :  * Debugger PIN: 522-122-102
+2022-11-29 00:05:10,191 INFO werkzeug Thread-2 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-29 00:05:25,243 ERROR root Thread-5 : invalid literal for int() with base 10: 'abc'
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Logger\app.py", line 17, in add
+    b = int(data['b'])
+ValueError: invalid literal for int() with base 10: 'abc'
+2022-11-29 00:05:25,247 INFO werkzeug Thread-5 : 127.0.0.1 - - [29/Nov/2022 00:05:25] "POST /apiv1/add HTTP/1.1" 200 -
+2022-11-29 00:05:49,426 INFO werkzeug Thread-6 : 127.0.0.1 - - [29/Nov/2022 00:05:49] "[33mPOST /apiv1/div HTTP/1.1[0m" 404 -
+2022-11-29 00:06:53,706 INFO werkzeug Thread-7 : 127.0.0.1 - - [29/Nov/2022 00:06:53] "[31m[1mPOST /apiv1/divide HTTP/1.1[0m" 405 -
+2022-11-29 00:07:06,783 INFO werkzeug Thread-8 : 127.0.0.1 - - [29/Nov/2022 00:07:06] "GET /apiv1/divide HTTP/1.1" 200 -
+2022-11-29 00:07:23,230 ERROR root Thread-9 : invalid literal for int() with base 10: 'abc'
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Logger\app.py", line 36, in div
+    b = int(data['b'])
+ValueError: invalid literal for int() with base 10: 'abc'
+2022-11-29 00:07:23,230 INFO werkzeug Thread-9 : 127.0.0.1 - - [29/Nov/2022 00:07:23] "GET /apiv1/divide HTTP/1.1" 200 -
+2022-11-29 00:07:40,452 ERROR root Thread-10 : Divide by 0 not allowed
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Logger\app.py", line 39, in div
+    raise ValueError("Divide by 0 not allowed")
+ValueError: Divide by 0 not allowed
+2022-11-29 00:07:40,452 INFO werkzeug Thread-10 : 127.0.0.1 - - [29/Nov/2022 00:07:40] "GET /apiv1/divide HTTP/1.1" 200 -
+2022-11-29 00:08:27,608 INFO werkzeug Thread-11 : 127.0.0.1 - - [29/Nov/2022 00:08:27] "GET /apiv1/file HTTP/1.1" 200 -
+2022-11-29 00:08:32,545 ERROR root Thread-12 : [Errno 2] No such file or directory: 'data1.txt'
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Logger\app.py", line 55, in fileread
+    file = open(filename, 'r')
+FileNotFoundError: [Errno 2] No such file or directory: 'data1.txt'
+2022-11-29 00:08:32,546 INFO werkzeug Thread-12 : 127.0.0.1 - - [29/Nov/2022 00:08:32] "GET /apiv1/file HTTP/1.1" 200 -
+2022-11-29 00:08:58,369 ERROR root Thread-13 : local variable 'value' referenced before assignment
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Logger\app.py", line 70, in unbound
+    print(value)
+UnboundLocalError: local variable 'value' referenced before assignment
+2022-11-29 00:08:58,370 INFO werkzeug Thread-13 : 127.0.0.1 - - [29/Nov/2022 00:08:58] "GET /apiv1/unbound HTTP/1.1" 200 -
