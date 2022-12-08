@@ -1,10 +1,15 @@
 from flask import Flask, request, Response, jsonify
 import logging
+import google.cloud.logging
+import analyzer
 
 app = Flask(__name__)
-logging.basicConfig(filename='record.log', level=logging.DEBUG,
-                    format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
+#logging.basicConfig(filename='record.log', level=logging.DEBUG,
+                    #format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
 
+client = google.cloud.logging.Client()
+client.setup_logging()
+logger = client.logger(name="logger Project")
 
 @app.route("/apiv1/add", methods=['GET','POST'])
 def add():
@@ -19,7 +24,7 @@ def add():
 
     except Exception as e:
         print(e)
-        logging.exception(e)
+        logger.log(e,resource={"type":"global", "labels":{}})
     response = jsonify({'a': a, 'b': b, 'result': add})
     return response, 200
 
@@ -41,7 +46,7 @@ def div():
 
     except Exception as e:
         print(e)
-        logging.exception(e)
+        logger.log(e, resource={"type": "global", "labels": {}})
     response = jsonify({'a': a, 'b': b, 'result': div})
     return response, 200
 
@@ -58,7 +63,9 @@ def fileread():
 
     except Exception as e:
         print(e)
-        logging.exception(e)
+        analyzer.analyzer({"email": "dhrumildma@gmail.com", "logs": e})
+        logger.log(e, resource={"type": "global", "labels": {}})
+
     response = jsonify(data)
     return response, 200
 
@@ -71,7 +78,9 @@ def unbound():
         value = data['value']
     except Exception as e:
         print(e)
-        logging.exception(e)
+        analyzer.analyzer({"email": "dhrumildma@gmail.com", "logs": e})
+        logger.log(e, resource={"type": "global", "labels": {}})
+
     return jsonify("Unbound"), 200
 
 
@@ -80,4 +89,4 @@ def unbound():
 
 
 if __name__ == '__main__':
-    app.run(host="127.0.0.1", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
