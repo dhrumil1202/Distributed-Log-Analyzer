@@ -1,15 +1,12 @@
 from flask import Flask, request, Response, jsonify
+import requests
+import traceback
 import logging
-import google.cloud.logging
-import analyzer
+import json
+
 
 app = Flask(__name__)
-#logging.basicConfig(filename='record.log', level=logging.DEBUG,
-                    #format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
-
-client = google.cloud.logging.Client()
-client.setup_logging()
-logger = client.logger(name="logger Project")
+#logging.basicConfig(filename='record.log', level=logging.DEBUG, format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
 
 @app.route("/apiv1/add", methods=['GET','POST'])
 def add():
@@ -24,7 +21,11 @@ def add():
 
     except Exception as e:
         print(e)
-        logger.log(e,resource={"type":"global", "labels":{}})
+        logs = "{0}".format(traceback.format_exc())
+        dictobj = {"email": "dhrumildma@gmail.com", "logs": logs}
+        data = json.dumps(dictobj)
+        response = requests.post("http://127.0.0.1:6000/apiv1/update/logs", data=data)
+        print(response)
     response = jsonify({'a': a, 'b': b, 'result': add})
     return response, 200
 
@@ -46,27 +47,33 @@ def div():
 
     except Exception as e:
         print(e)
-        logger.log(e, resource={"type": "global", "labels": {}})
+        logs = "{0}".format(traceback.format_exc())
+        dictobj = {"email": "dhrumildma@gmail.com", "logs": logs}
+        data = json.dumps(dictobj)
+        response = requests.post("http://127.0.0.1:6000/apiv1/update/logs", data=data)
+        print(response)
     response = jsonify({'a': a, 'b': b, 'result': div})
     return response, 200
 
 
-@app.route("/apiv1/file", methods=['GET'])
+@app.route("/apiv1/file", methods=['GET', 'POST'])
 def fileread():
     data = request.json
-
+    print(data)
     try:
         filename = data['file']
         file = open(filename, 'r')
         data = file.readlines()
         data = list(data)
-
+        print(data)
     except Exception as e:
-        print(e)
-        analyzer.analyzer({"email": "dhrumildma@gmail.com", "logs": e})
-        logger.log(e, resource={"type": "global", "labels": {}})
-
-    response = jsonify(data)
+        print(type(e))
+        logs = "{0}".format(traceback.format_exc())
+        dictobj = {"email": "dhrumildma@gmail.com", "logs": logs}
+        data = json.dumps(dictobj)
+        response = requests.post("http://127.0.0.1:6000/apiv1/update/logs", data=data)
+        print(response)
+    response = "hello"
     return response, 200
 
 
@@ -78,9 +85,11 @@ def unbound():
         value = data['value']
     except Exception as e:
         print(e)
-        analyzer.analyzer({"email": "dhrumildma@gmail.com", "logs": e})
-        logger.log(e, resource={"type": "global", "labels": {}})
-
+        logs = "{0}".format(traceback.format_exc())
+        dictobj = {"email": "dhrumildma@gmail.com", "logs": logs}
+        data = json.dumps(dictobj)
+        response = requests.post("http://127.0.0.1:6000/apiv1/update/logs", data=data)
+        print(response)
     return jsonify("Unbound"), 200
 
 

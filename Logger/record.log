@@ -1,7 +1,7 @@
-2022-12-08 11:29:10,636 ERROR app Thread-11 : Exception on /apiv1/file [GET]
+2022-12-09 11:03:06,803 ERROR app Thread-19 : Exception on /apiv1/file [GET]
 Traceback (most recent call last):
   File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 55, in fileread
-    filename = data['file']
+    data = file.readlines()
 FileNotFoundError: [Errno 2] No such file or directory: 'data1.txt'
 
 During handling of the above exception, another exception occurred:
@@ -16,7 +16,7 @@ Traceback (most recent call last):
   File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
   File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 61, in fileread
-    print(e)
+    response = requests.post("http://127.0.0.1:6000/apiv1/update/logs", data)
   File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\json\__init__.py", line 342, in jsonify
     return current_app.json.response(*args, **kwargs)
   File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\json\provider.py", line 309, in response
@@ -32,25 +32,28 @@ Traceback (most recent call last):
   File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\json\provider.py", line 122, in _default
     raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
 TypeError: Object of type FileNotFoundError is not JSON serializable
-2022-12-08 11:29:10,638 INFO werkzeug Thread-11 : 127.0.0.1 - - [08/Dec/2022 11:29:10] "[35m[1mGET /apiv1/file HTTP/1.1[0m" 500 -
-2022-12-08 11:29:53,234 INFO werkzeug MainThread :  * Detected change in 'D:\\Masters degree\\SEM 3\\Datacenter scale Computing\\Project\\Project\\Distributed-Log-Analyzer\\Logger\\app.py', reloading
-2022-12-08 11:29:53,267 INFO werkzeug MainThread :  * Restarting with stat
-2022-12-08 11:29:54,075 WARNING werkzeug MainThread :  * Debugger is active!
-2022-12-08 11:29:54,089 INFO werkzeug MainThread :  * Debugger PIN: 109-160-928
-2022-12-08 11:30:02,336 INFO werkzeug MainThread :  * Detected change in 'D:\\Masters degree\\SEM 3\\Datacenter scale Computing\\Project\\Project\\Distributed-Log-Analyzer\\Logger\\app.py', reloading
-2022-12-08 11:30:02,374 INFO werkzeug MainThread :  * Restarting with stat
-2022-12-08 11:30:02,863 WARNING werkzeug MainThread :  * Debugger is active!
-2022-12-08 11:30:02,871 INFO werkzeug MainThread :  * Debugger PIN: 109-160-928
-2022-12-08 11:30:05,662 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2022-12-09 11:03:06,811 INFO werkzeug Thread-19 : 127.0.0.1 - - [09/Dec/2022 11:03:06] "[35m[1mGET /apiv1/file HTTP/1.1[0m" 500 -
+2022-12-09 11:07:02,227 INFO werkzeug MainThread :  * Detected change in 'D:\\Masters degree\\SEM 3\\Datacenter scale Computing\\Project\\Project\\Distributed-Log-Analyzer\\Logger\\logger.py', reloading
+2022-12-09 11:07:02,276 INFO werkzeug MainThread :  * Restarting with stat
+2022-12-09 11:07:03,240 WARNING werkzeug MainThread :  * Debugger is active!
+2022-12-09 11:07:03,262 INFO werkzeug MainThread :  * Debugger PIN: 109-160-928
+2022-12-09 11:08:27,881 INFO werkzeug MainThread :  * Detected change in 'D:\\Masters degree\\SEM 3\\Datacenter scale Computing\\Project\\Project\\Distributed-Log-Analyzer\\Logger\\logger.py', reloading
+2022-12-09 11:08:27,911 INFO werkzeug MainThread :  * Restarting with stat
+2022-12-09 11:08:28,487 WARNING werkzeug MainThread :  * Debugger is active!
+2022-12-09 11:08:28,501 INFO werkzeug MainThread :  * Debugger PIN: 109-160-928
+2022-12-09 11:14:15,509 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
-2022-12-08 11:30:05,662 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
-2022-12-08 11:30:05,663 INFO werkzeug MainThread :  * Restarting with stat
-2022-12-08 11:30:06,492 WARNING werkzeug MainThread :  * Debugger is active!
-2022-12-08 11:30:06,509 INFO werkzeug MainThread :  * Debugger PIN: 109-160-928
-2022-12-08 11:30:10,172 ERROR app Thread-12 : Exception on /apiv1/file [GET]
+ * Running on http://192.168.0.2:5000
+2022-12-09 11:14:15,510 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2022-12-09 11:14:15,512 INFO werkzeug MainThread :  * Restarting with stat
+2022-12-09 11:14:16,450 WARNING werkzeug MainThread :  * Debugger is active!
+2022-12-09 11:14:16,466 INFO werkzeug MainThread :  * Debugger PIN: 109-160-928
+2022-12-09 11:15:43,061 INFO werkzeug Thread-20 : 127.0.0.1 - - [09/Dec/2022 11:15:43] "GET /apiv1/file HTTP/1.1" 200 -
+2022-12-09 11:15:55,259 ERROR app Thread-21 : Exception on /apiv1/file [GET]
 Traceback (most recent call last):
   File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 55, in fileread
-    filename = data['file']
+    data = list(data)
 FileNotFoundError: [Errno 2] No such file or directory: 'data1.txt'
 
 During handling of the above exception, another exception occurred:
@@ -65,28 +68,205 @@ Traceback (most recent call last):
   File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
   File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 61, in fileread
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\json\__init__.py", line 342, in jsonify
+    return current_app.json.response(*args, **kwargs)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\json\provider.py", line 309, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\json\provider.py", line 230, in dumps
+    return json.dumps(obj, **kwargs)
+  File "C:\Users\Dhrumil\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\Dhrumil\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Dhrumil\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\json\provider.py", line 122, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type FileNotFoundError is not JSON serializable
+2022-12-09 11:15:55,264 INFO werkzeug Thread-21 : 127.0.0.1 - - [09/Dec/2022 11:15:55] "[35m[1mGET /apiv1/file HTTP/1.1[0m" 500 -
+2022-12-09 11:18:36,295 INFO werkzeug Thread-22 : 127.0.0.1 - - [09/Dec/2022 11:18:36] "[31m[1mPOST /apiv1/file HTTP/1.1[0m" 405 -
+2022-12-09 11:18:55,729 INFO werkzeug Thread-23 : 127.0.0.1 - - [09/Dec/2022 11:18:55] "[31m[1mPOST /apiv1/file HTTP/1.1[0m" 405 -
+2022-12-09 11:22:19,626 INFO werkzeug Thread-24 : 127.0.0.1 - - [09/Dec/2022 11:22:19] "[31m[1mPOST /apiv1/file HTTP/1.1[0m" 405 -
+2022-12-09 11:22:25,246 INFO werkzeug Thread-25 : 127.0.0.1 - - [09/Dec/2022 11:22:25] "[31m[1mPOST /apiv1/file HTTP/1.1[0m" 405 -
+2022-12-09 11:22:57,369 INFO werkzeug Thread-26 : 127.0.0.1 - - [09/Dec/2022 11:22:57] "[31m[1mPOST /apiv1/file HTTP/1.1[0m" 405 -
+2022-12-09 11:23:00,126 INFO werkzeug Thread-27 : 127.0.0.1 - - [09/Dec/2022 11:23:00] "[31m[1mPOST /apiv1/file HTTP/1.1[0m" 405 -
+2022-12-09 11:25:02,558 INFO werkzeug Thread-28 : 127.0.0.1 - - [09/Dec/2022 11:25:02] "[31m[1mPOST /apiv1/file HTTP/1.1[0m" 405 -
+2022-12-09 11:35:47,596 ERROR app Thread-29 : Exception on /apiv1/file [GET]
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 55, in fileread
+    data = file.readlines()
+FileNotFoundError: [Errno 2] No such file or directory: 'data1.txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 61, in fileread
+    fh.write(e)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\json\__init__.py", line 342, in jsonify
+    return current_app.json.response(*args, **kwargs)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\json\provider.py", line 309, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\json\provider.py", line 230, in dumps
+    return json.dumps(obj, **kwargs)
+  File "C:\Users\Dhrumil\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\Dhrumil\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Dhrumil\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\json\provider.py", line 122, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type FileNotFoundError is not JSON serializable
+2022-12-09 11:35:47,601 INFO werkzeug Thread-29 : 127.0.0.1 - - [09/Dec/2022 11:35:47] "[35m[1mGET /apiv1/file HTTP/1.1[0m" 500 -
+2022-12-09 12:04:00,956 INFO werkzeug Thread-30 : 127.0.0.1 - - [09/Dec/2022 12:04:00] "[31m[1mPOST /apiv1/file HTTP/1.1[0m" 405 -
+2022-12-09 12:05:16,330 INFO werkzeug Thread-31 : 127.0.0.1 - - [09/Dec/2022 12:05:16] "[31m[1mPOST /apiv1/file HTTP/1.1[0m" 405 -
+2022-12-09 12:23:45,848 INFO werkzeug Thread-32 : 127.0.0.1 - - [09/Dec/2022 12:23:45] "[31m[1mPOST /apiv1/file HTTP/1.1[0m" 405 -
+2022-12-09 12:29:31,444 INFO werkzeug Thread-33 : 127.0.0.1 - - [09/Dec/2022 12:29:31] "[31m[1mPOST /apiv1/file HTTP/1.1[0m" 405 -
+2022-12-09 12:29:52,565 INFO werkzeug Thread-34 : 127.0.0.1 - - [09/Dec/2022 12:29:52] "[31m[1mPOST /apiv1/file HTTP/1.1[0m" 405 -
+2022-12-09 12:30:05,717 INFO werkzeug Thread-35 : 127.0.0.1 - - [09/Dec/2022 12:30:05] "[31m[1mPOST /apiv1/file HTTP/1.1[0m" 405 -
+2022-12-09 12:30:22,908 INFO werkzeug Thread-36 : 127.0.0.1 - - [09/Dec/2022 12:30:22] "[31m[1mPOST /apiv1/file HTTP/1.1[0m" 405 -
+2022-12-09 12:40:03,570 INFO werkzeug Thread-37 : 127.0.0.1 - - [09/Dec/2022 12:40:03] "GET /apiv1/file HTTP/1.1" 200 -
+2022-12-09 12:40:16,681 INFO werkzeug Thread-38 : 127.0.0.1 - - [09/Dec/2022 12:40:16] "[31m[1mPOST /apiv1/file HTTP/1.1[0m" 405 -
+2022-12-09 12:40:38,366 ERROR app Thread-39 : Exception on /apiv1/file [GET]
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 55, in fileread
+    data = file.readlines()
+FileNotFoundError: [Errno 2] No such file or directory: 'data1.txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 60, in fileread
+    fh = open("sample.txt", 'wr')
+OSError: [Errno 22] Invalid argument
+2022-12-09 12:40:38,374 INFO werkzeug Thread-39 : 127.0.0.1 - - [09/Dec/2022 12:40:38] "[35m[1mGET /apiv1/file HTTP/1.1[0m" 500 -
+2022-12-09 12:42:14,572 INFO werkzeug Thread-40 : 127.0.0.1 - - [09/Dec/2022 12:42:14] "GET /apiv1/add HTTP/1.1" 200 -
+2022-12-09 12:43:02,967 ERROR app Thread-41 : Exception on /apiv1/add [GET]
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 17, in add
+    a = int(data['a'])
+ValueError: invalid literal for int() with base 10: 'abc'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 21, in add
+    except Exception as e:
+OSError: [Errno 22] Invalid argument
+2022-12-09 12:43:02,969 INFO werkzeug Thread-41 : 127.0.0.1 - - [09/Dec/2022 12:43:02] "[35m[1mGET /apiv1/add HTTP/1.1[0m" 500 -
+2022-12-09 12:44:10,742 ERROR app Thread-42 : Exception on /apiv1/add [GET]
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 17, in add
+    a = int(data['a'])
+ValueError: invalid literal for int() with base 10: 'abc'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 21, in add
+    except Exception as e:
+OSError: [Errno 22] Invalid argument
+2022-12-09 12:44:10,745 INFO werkzeug Thread-42 : 127.0.0.1 - - [09/Dec/2022 12:44:10] "[35m[1mGET /apiv1/add HTTP/1.1[0m" 500 -
+2022-12-09 12:44:26,610 ERROR app Thread-43 : Exception on /apiv1/add [GET]
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 17, in add
+    a = int(data['a'])
+ValueError: invalid literal for int() with base 10: 'abc'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 21, in add
+    except Exception as e:
+OSError: [Errno 22] Invalid argument
+2022-12-09 12:44:26,613 INFO werkzeug Thread-43 : 127.0.0.1 - - [09/Dec/2022 12:44:26] "[35m[1mGET /apiv1/add HTTP/1.1[0m" 500 -
+2022-12-09 12:44:49,314 ERROR app Thread-44 : Exception on /apiv1/add [GET]
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 17, in add
+    a = int(data['a'])
+ValueError: invalid literal for int() with base 10: 'abc'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 21, in add
+    except Exception as e:
+OSError: [Errno 22] Invalid argument
+2022-12-09 12:44:49,316 INFO werkzeug Thread-44 : 127.0.0.1 - - [09/Dec/2022 12:44:49] "[35m[1mGET /apiv1/add HTTP/1.1[0m" 500 -
+2022-12-09 12:45:39,064 ERROR app Thread-45 : Exception on /apiv1/divide [GET]
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 39, in div
+    raise ValueError("Divide by 0 not allowed")
+ValueError: Divide by 0 not allowed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 43, in div
     print(e)
-  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\json\__init__.py", line 342, in jsonify
-    return current_app.json.response(*args, **kwargs)
-  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\json\provider.py", line 309, in response
-    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
-  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\json\provider.py", line 230, in dumps
-    return json.dumps(obj, **kwargs)
-  File "C:\Users\Dhrumil\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 238, in dumps
-    **kw).encode(obj)
-  File "C:\Users\Dhrumil\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 199, in encode
-    chunks = self.iterencode(o, _one_shot=True)
-  File "C:\Users\Dhrumil\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 257, in iterencode
-    return _iterencode(o, 0)
-  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\json\provider.py", line 122, in _default
-    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
-TypeError: Object of type FileNotFoundError is not JSON serializable
-2022-12-08 11:30:10,175 INFO werkzeug Thread-12 : 127.0.0.1 - - [08/Dec/2022 11:30:10] "[35m[1mGET /apiv1/file HTTP/1.1[0m" 500 -
-2022-12-08 13:20:09,156 ERROR app Thread-13 : Exception on /apiv1/file [GET]
+OSError: [Errno 22] Invalid argument
+2022-12-09 12:45:39,066 INFO werkzeug Thread-45 : 127.0.0.1 - - [09/Dec/2022 12:45:39] "[35m[1mGET /apiv1/divide HTTP/1.1[0m" 500 -
+2022-12-09 12:46:00,549 ERROR app Thread-46 : Exception on /apiv1/divide [GET]
 Traceback (most recent call last):
-  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 55, in fileread
-    def fileread():
-FileNotFoundError: [Errno 2] No such file or directory: 'data1.txt'
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 39, in div
+    raise ValueError("Divide by 0 not allowed")
+ValueError: Divide by 0 not allowed
 
 During handling of the above exception, another exception occurred:
 
@@ -99,29 +279,15 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 61, in fileread
-    data = file.readlines()
-  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\json\__init__.py", line 342, in jsonify
-    return current_app.json.response(*args, **kwargs)
-  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\json\provider.py", line 309, in response
-    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
-  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\json\provider.py", line 230, in dumps
-    return json.dumps(obj, **kwargs)
-  File "C:\Users\Dhrumil\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 238, in dumps
-    **kw).encode(obj)
-  File "C:\Users\Dhrumil\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 199, in encode
-    chunks = self.iterencode(o, _one_shot=True)
-  File "C:\Users\Dhrumil\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 257, in iterencode
-    return _iterencode(o, 0)
-  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\json\provider.py", line 122, in _default
-    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
-TypeError: Object of type FileNotFoundError is not JSON serializable
-2022-12-08 13:20:09,166 INFO werkzeug Thread-13 : 127.0.0.1 - - [08/Dec/2022 13:20:09] "[35m[1mGET /apiv1/file HTTP/1.1[0m" 500 -
-2022-12-08 13:22:35,839 ERROR app Thread-14 : Exception on /apiv1/file [GET]
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 43, in div
+    print(e)
+OSError: [Errno 22] Invalid argument
+2022-12-09 12:46:00,552 INFO werkzeug Thread-46 : 127.0.0.1 - - [09/Dec/2022 12:46:00] "[35m[1mGET /apiv1/divide HTTP/1.1[0m" 500 -
+2022-12-09 12:47:00,036 ERROR app Thread-47 : Exception on /apiv1/divide [GET]
 Traceback (most recent call last):
-  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 55, in fileread
-    def fileread():
-FileNotFoundError: [Errno 2] No such file or directory: 'data1.txt'
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 39, in div
+    raise ValueError("Divide by 0 not allowed")
+ValueError: Divide by 0 not allowed
 
 During handling of the above exception, another exception occurred:
 
@@ -134,21 +300,183 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 61, in fileread
-    data = file.readlines()
-  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\json\__init__.py", line 342, in jsonify
-    return current_app.json.response(*args, **kwargs)
-  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\json\provider.py", line 309, in response
-    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
-  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\json\provider.py", line 230, in dumps
-    return json.dumps(obj, **kwargs)
-  File "C:\Users\Dhrumil\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 238, in dumps
-    **kw).encode(obj)
-  File "C:\Users\Dhrumil\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 199, in encode
-    chunks = self.iterencode(o, _one_shot=True)
-  File "C:\Users\Dhrumil\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 257, in iterencode
-    return _iterencode(o, 0)
-  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\json\provider.py", line 122, in _default
-    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
-TypeError: Object of type FileNotFoundError is not JSON serializable
-2022-12-08 13:22:35,843 INFO werkzeug Thread-14 : 127.0.0.1 - - [08/Dec/2022 13:22:35] "[35m[1mGET /apiv1/file HTTP/1.1[0m" 500 -
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 43, in div
+    print(e)
+OSError: [Errno 22] Invalid argument
+2022-12-09 12:47:00,038 INFO werkzeug Thread-47 : 127.0.0.1 - - [09/Dec/2022 12:47:00] "[35m[1mGET /apiv1/divide HTTP/1.1[0m" 500 -
+2022-12-09 12:48:28,210 ERROR app Thread-48 : Exception on /apiv1/divide [GET]
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 39, in div
+    raise ValueError("Divide by 0 not allowed")
+ValueError: Divide by 0 not allowed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 43, in div
+    print(e)
+OSError: [Errno 22] Invalid argument
+2022-12-09 12:48:28,212 INFO werkzeug Thread-48 : 127.0.0.1 - - [09/Dec/2022 12:48:28] "[35m[1mGET /apiv1/divide HTTP/1.1[0m" 500 -
+2022-12-09 12:52:23,851 INFO werkzeug Thread-49 : 127.0.0.1 - - [09/Dec/2022 12:52:23] "GET /apiv1/add HTTP/1.1" 200 -
+2022-12-09 12:52:44,425 ERROR app Thread-50 : Exception on /apiv1/add [GET]
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 17, in add
+    a = int(data['a'])
+ValueError: invalid literal for int() with base 10: 'abc'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 21, in add
+    except Exception as e:
+OSError: [Errno 22] Invalid argument
+2022-12-09 12:52:44,427 INFO werkzeug Thread-50 : 127.0.0.1 - - [09/Dec/2022 12:52:44] "[35m[1mGET /apiv1/add HTTP/1.1[0m" 500 -
+2022-12-09 12:55:17,024 ERROR app Thread-51 : Exception on /apiv1/add [GET]
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 17, in add
+    a = int(data['a'])
+ValueError: invalid literal for int() with base 10: 'abc'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 21, in add
+    except Exception as e:
+OSError: [Errno 22] Invalid argument
+2022-12-09 12:55:17,026 INFO werkzeug Thread-51 : 127.0.0.1 - - [09/Dec/2022 12:55:17] "[35m[1mGET /apiv1/add HTTP/1.1[0m" 500 -
+2022-12-09 12:58:10,913 ERROR app Thread-52 : Exception on /apiv1/add [GET]
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 17, in add
+    a = int(data['a'])
+ValueError: invalid literal for int() with base 10: 'abc'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 21, in add
+    except Exception as e:
+OSError: [Errno 22] Invalid argument
+2022-12-09 12:58:10,914 INFO werkzeug Thread-52 : 127.0.0.1 - - [09/Dec/2022 12:58:10] "[35m[1mGET /apiv1/add HTTP/1.1[0m" 500 -
+2022-12-09 13:01:18,971 ERROR app Thread-53 : Exception on /apiv1/add [GET]
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 17, in add
+    a = int(data['a'])
+ValueError: invalid literal for int() with base 10: 'abc'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 21, in add
+    except Exception as e:
+OSError: [Errno 22] Invalid argument
+2022-12-09 13:01:18,975 INFO werkzeug Thread-53 : 127.0.0.1 - - [09/Dec/2022 13:01:18] "[35m[1mGET /apiv1/add HTTP/1.1[0m" 500 -
+2022-12-09 13:01:31,864 INFO werkzeug Thread-54 : 127.0.0.1 - - [09/Dec/2022 13:01:31] "GET /apiv1/add HTTP/1.1" 200 -
+2022-12-09 13:02:23,870 INFO werkzeug Thread-55 : 127.0.0.1 - - [09/Dec/2022 13:02:23] "GET /apiv1/add HTTP/1.1" 200 -
+2022-12-09 13:18:27,793 INFO werkzeug Thread-56 : 127.0.0.1 - - [09/Dec/2022 13:18:27] "GET /apiv1/add HTTP/1.1" 200 -
+2022-12-09 13:21:27,925 ERROR app Thread-57 : Exception on /apiv1/add [GET]
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 17, in add
+    a = int(data['a'])
+ValueError: invalid literal for int() with base 10: 'abc'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 21, in add
+    except Exception as e:
+OSError: [Errno 22] Invalid argument
+2022-12-09 13:21:27,926 INFO werkzeug Thread-57 : 127.0.0.1 - - [09/Dec/2022 13:21:27] "[35m[1mGET /apiv1/add HTTP/1.1[0m" 500 -
+2022-12-09 13:25:25,246 ERROR app Thread-58 : Exception on /apiv1/add [GET]
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 17, in add
+    a = int(data['a'])
+ValueError: invalid literal for int() with base 10: 'abc'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 21, in add
+    except Exception as e:
+OSError: [Errno 22] Invalid argument
+2022-12-09 13:25:25,248 INFO werkzeug Thread-58 : 127.0.0.1 - - [09/Dec/2022 13:25:25] "[35m[1mGET /apiv1/add HTTP/1.1[0m" 500 -
+2022-12-09 13:25:29,598 ERROR app Thread-59 : Exception on /apiv1/add [GET]
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 17, in add
+    a = int(data['a'])
+ValueError: invalid literal for int() with base 10: 'abc'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Masters degree\SEM 3\Datacenter scale Computing\Project\Project\Distributed-Log-Analyzer\Logger\app.py", line 21, in add
+    except Exception as e:
+OSError: [Errno 22] Invalid argument
+2022-12-09 13:25:29,600 INFO werkzeug Thread-59 : 127.0.0.1 - - [09/Dec/2022 13:25:29] "[35m[1mGET /apiv1/add HTTP/1.1[0m" 500 -
+2022-12-09 13:25:42,089 INFO werkzeug Thread-60 : 127.0.0.1 - - [09/Dec/2022 13:25:42] "GET /apiv1/add HTTP/1.1" 200 -
+2022-12-09 13:26:07,652 INFO werkzeug Thread-61 : 127.0.0.1 - - [09/Dec/2022 13:26:07] "GET /apiv1/add HTTP/1.1" 200 -
+2022-12-09 13:26:08,821 INFO werkzeug Thread-62 : 127.0.0.1 - - [09/Dec/2022 13:26:08] "GET /apiv1/add HTTP/1.1" 200 -
+2022-12-09 13:34:38,268 INFO werkzeug Thread-63 : 127.0.0.1 - - [09/Dec/2022 13:34:38] "GET /apiv1/add HTTP/1.1" 200 -
