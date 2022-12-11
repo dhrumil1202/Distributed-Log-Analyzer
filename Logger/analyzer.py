@@ -1,4 +1,4 @@
-
+from trycourier import Courier
 import redis
 import time as t
 import json
@@ -9,32 +9,8 @@ redis_host = os.getenv("REDIS_HOST") or "localhost"
 redis_port = 6379
 redis_connection = redis.StrictRedis(host=redis_host, port=redis_port, db=0)
 redis_queue = "ToWorker"
+client = Courier(auth_token="pk_prod_JGDEDHYZYD4SJCJ9AE5N6GC0CDRJ")
 
-def analyzer(data):
-
-    flag = False
-    print(data)
-
-    try:
-        email = data['email']
-        logs = data['logs'].split(" ")
-        for word in logs:
-            print(word)
-            if word.upper == 'ERROR' or 'ERROR' in word.upper:
-                flag = True
-                break
-        print(flag)
-        if flag:
-            ## Send email notification of error occured
-            data = json.dumps(data)
-            response = requests.post('http://127.0.0.1:3000/apisendmail', data=data)
-            print(response)
-
-        ## Add data to the redis sorted sets
-    except Exception as e:
-        print(e)
-
-    return flag
 
 
 while True:
@@ -57,9 +33,25 @@ while True:
             print(flag)
             if flag:
                 ## Send email notification of error occured
-                data = json.dumps(data)
-                response = requests.post('http://127.0.0.1:3000/apisendmail', data=data)
-                print(response)
+                #data = json.dumps(data)
+                log = data['logs']
+                test = "something {0}".format(log)
+                print(test)
+                resp = client.send_message(
+                    message={
+                        "to": {
+                            "email": email
+                        },
+                        "content": {
+                            "title": "Error Notification",
+                            "body": "Error Occured {0}".format(log)
+                        },
+                        "data": {
+                            "log": str(data['logs'])
+                        }
+                    }
+                )
+                print(resp)
 
     except Exception as e:
         print(f"worker loop exception: {str(e)}")
