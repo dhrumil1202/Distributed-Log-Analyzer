@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: logger-svc
+  labels:
+    app: logger
+spec:
+  type: NodePort
+  selector:
+    app: logger
+  ports:
+  - port: 80
+    targetPort: 5000

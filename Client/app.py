@@ -4,6 +4,7 @@ import traceback
 import logging
 import json
 
+# Client file to generate the logs
 
 app = Flask(__name__)
 #logging.basicConfig(filename='record.log', level=logging.DEBUG, format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')

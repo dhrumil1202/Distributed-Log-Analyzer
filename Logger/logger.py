@@ -23,13 +23,10 @@ app = Flask(__name__)
 #firebase = firebase.FirebaseApplication("https://distributed-log-default-rtdb.firebaseio.com/", None)
 
 #logs_ref = db.collection('Logs')
-print("world")
 
 @app.route("/apiv1/update/logs", methods=['GET','POST'])
 def updatelogs():
-    print("hello")
     data = json.loads((request.data).decode("utf-8"))
-    print(data)
 
     email = data['email']
     logs = data['logs']
@@ -39,7 +36,6 @@ def updatelogs():
     today = str(datetime.today().strftime('%Y-%m-%d'))
 
     reference = "/{0}/{1}/{2}".format(username, today, currenttime)
-    print(reference)
 
     ref = db.reference(reference)
     ref.set(data)
@@ -50,4 +46,4 @@ def updatelogs():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=6000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
