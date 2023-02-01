@@ -9,7 +9,7 @@ redis_host = os.getenv("REDIS_HOST") or "localhost"
 redis_port = 6379
 redis_connection = redis.StrictRedis(host=redis_host, port=redis_port, db=0)
 redis_queue = "ToWorker"
-client = Courier(auth_token="pk_prod_JGDEDHYZYD4SJCJ9AE5N6GC0CDRJ")
+client = Courier(auth_token="your auth key")
 
 
 
